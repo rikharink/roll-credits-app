@@ -401,7 +401,7 @@ export const DesignPage = () => {
           <Url href="https://dev.to/cassidoo/making-a-virtual-credits-sequence-for-your-video-calls-with-obs-and-codepen-3dco">
             Inspired by this post by Cassidy Williams
           </Url>
-          <Url href="https://github.com/rikharink">Made by Rik Harink</Url>
+          <Url href="https://github.com/rikharink/roll-credits-app">Made by Rik Harink</Url>
         </Footer>
       </Designer>
       <Preview>
