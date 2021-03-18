@@ -1,0 +1,10 @@
+name = "roll-credits-app"
+type = "webpack"
+account_id = "b4e69cf20047b9ef21fb837fb53ebae3"
+workers_dev = false
+route = "*rollcredits.app/*"
+zone_id = "fe843e34cc88b7a20d916d14c4523ec4"
+
+[site]
+bucket = "build"
+entry-point = "workers-site"

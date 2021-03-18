@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import "@fontsource/montserrat";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { DesignPage } from "./Pages/DesignPage";
+import { RollCreditsPage } from "./Pages/RollCreditsPage";
+import {
+  CreditsDesign,
+  CreditsDesignContextProvider,
+} from "./Context/CreditsContext";
 
 function App() {
+  const defaults: Partial<CreditsDesign> = {
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CreditsDesignContextProvider defaults={defaults}>
+      <Router>
+        <Switch>
+          <Route path="/credits">
+            <RollCreditsPage />
+          </Route>
+          <Route path="/">
+            <DesignPage />
+          </Route>
+        </Switch>
+      </Router>
+    </CreditsDesignContextProvider>
   );
 }
 
