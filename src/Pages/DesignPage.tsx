@@ -20,14 +20,6 @@ const Page = styled(BasePage)`
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: true;
   overflow: hidden;
-
-  @media (max-width: 768px) {
-    grid-template-columns: unset;
-    grid-auto-columns: unset;
-    grid-template-rows: 1fr 1fr;
-    grid-auto-rows: true;
-    overflow: auto;
-  }
 `;
 
 const Designer = styled.section`
@@ -323,7 +315,7 @@ export const DesignPage = () => {
                 addPerson(nameRef.current?.value, descriptionRef.current?.value)
               }
             >
-              add person
+              add credit
             </Button>
           </CreditsSet>
           <ThemeSet>
