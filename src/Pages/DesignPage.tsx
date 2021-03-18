@@ -11,7 +11,6 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { List, arrayMove, arrayRemove, IItemProps } from "react-movable";
 import { Credit } from "../Components/Credits/Credit";
-import Dilbert from "../20210315-dilbert-end-online-meeting.gif";
 
 const Page = styled(BasePage)`
   width: 100%;
@@ -396,7 +395,6 @@ export const DesignPage = () => {
         <Link to="/credits">
           <Button type="button">Roll Credits</Button>
         </Link>
-        <Img src={Dilbert} alt="Dilbert - End online meeting" />
         <Footer>
           <Url href="https://dev.to/cassidoo/making-a-virtual-credits-sequence-for-your-video-calls-with-obs-and-codepen-3dco">
             Inspired by this post by Cassidy Williams

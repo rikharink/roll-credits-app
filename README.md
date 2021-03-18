@@ -3,8 +3,6 @@
 End your akward online meetings by rolling credits!
 Inspired by [this blogpost by Cassidy Williams](https://dev.to/cassidoo/making-a-virtual-credits-sequence-for-your-video-calls-with-obs-and-codepen-3dco)
 
-![dilbert roll credits](src/20210315-dilbert-end-online-meeting.gif)
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
