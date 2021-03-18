@@ -5,7 +5,6 @@ const BasePage = styled.div`
   display: flex;
   justify-content: center;
   background: white;
-  overflow: hidden;
 `;
 
 export { BasePage };

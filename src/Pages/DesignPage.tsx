@@ -17,8 +17,10 @@ const Page = styled(BasePage)`
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-columns: true;
-  overflow: hidden;
+  @media (max-width: 768px) {
+    grid-template-columns: unset;
+    grid-template-rows: 1fr 1fr;
+  }
 `;
 
 const Designer = styled.section`
@@ -27,9 +29,12 @@ const Designer = styled.section`
   align-items: center;
   justify-content: flex-start;
   overflow-y: auto;
-  overflow-y: overlay;
-  height: 100vh;
-  padding-top: 2rem;
+  min-height: 100vh;
+  padding: 0 8px;
+
+  @media (max-width: 768px) {
+    overflow-y: initial;
+  }
 `;
 
 const Preview = styled.section`
@@ -94,12 +99,6 @@ const CreditList = styled.ul<IItemProps>`
   list-style: none;
 `;
 
-const Img = styled.img`
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-  width: 60%;
-`;
-
 const Url = styled.a`
   font-size: 1.2rem;
   margin: 1ch 0;
@@ -111,30 +110,25 @@ const Url = styled.a`
 `;
 
 const Header = styled.header`
-  width: 45%;
+  width: 95%;
   display: flex;
   justify-content: space-evenly;
   border: 2px solid black;
-  position: absolute;
-  right: 2.5%;
-  top: 1ch;
   background: ghostwhite;
-  z-index: 9999;
+  margin-top: 1rem;
 
   h1 {
     font-size: 1.2rem;
   }
 `;
 const Footer = styled.footer`
-  width: 45%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 95%;
   display: flex;
   justify-content: space-evenly;
   border: 2px solid black;
-  position: absolute;
-  right: 2.5%;
-  bottom: 1ch;
   background: ghostwhite;
-  z-index: 9999;
 `;
 
 interface ListItemProps extends IItemProps {
@@ -235,10 +229,10 @@ export const DesignPage = () => {
 
   return (
     <Page>
-      <Header>
-        <h1>Roll Credits Designer</h1>
-      </Header>
       <Designer>
+        <Header>
+          <h1>Roll Credits Designer</h1>
+        </Header>
         <Form onSubmit={handleSubmit(onSubmit)} onChange={onChange}>
           <CreditsTitleSet>
             <FormInputWrapper>
