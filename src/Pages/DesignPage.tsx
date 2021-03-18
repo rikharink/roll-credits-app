@@ -20,6 +20,14 @@ const Page = styled(BasePage)`
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: true;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    grid-template-columns: unset;
+    grid-auto-columns: unset;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: true;
+    overflow: auto;
+  }
 `;
 
 const Designer = styled.section`
@@ -401,7 +409,9 @@ export const DesignPage = () => {
           <Url href="https://dev.to/cassidoo/making-a-virtual-credits-sequence-for-your-video-calls-with-obs-and-codepen-3dco">
             Inspired by this post by Cassidy Williams
           </Url>
-          <Url href="https://github.com/rikharink/roll-credits-app">Made by Rik Harink</Url>
+          <Url href="https://github.com/rikharink/roll-credits-app">
+            Made by Rik Harink
+          </Url>
         </Footer>
       </Designer>
       <Preview>
